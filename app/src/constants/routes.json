@@ -1,8 +1,7 @@
 {
-  "WELCOME": "/",
-  "ABOUT": "/about",
-  "MOTD": "/motd",
-  "LOCALIZATION": "/localization",
-  "UNDOREDO": "/undoredo",
-  "CONTEXTMENU": "/contextmenu"
+  "DASHBOARD": "/",
+  "ORDERS": "/orders",
+  "CUSTOMERS": "/customers",
+  "PRODUCTS": "/products",
+  "CATEGORIES": "/categories"
 }
