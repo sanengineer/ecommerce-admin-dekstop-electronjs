@@ -5,6 +5,7 @@ import Routes from "Core/routes";
 import Nav from "./nav";
 import Split from "react-split";
 import Resizable from "re-resizable";
+import { Topnav } from "../components";
 import "./root.css";
 
 class Root extends React.Component {
@@ -17,8 +18,8 @@ class Root extends React.Component {
           <ConnectedRouter history={history}>
             <div className="main-grid">
               <Nav history={history}></Nav>
-              <div>
-                <div className="top-bar top-bar-right-part">TEST</div>
+              <div className="main-screen">
+                <Topnav />
                 <Routes></Routes>
               </div>
             </div>

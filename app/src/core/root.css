@@ -13,12 +13,19 @@ body {
 
 .main-grid {
   display: grid;
-  grid-template-columns: 11.25rem 1fr 11.25rem;
+  grid-template-columns: 11.25rem 1fr;
 }
 
 .top-bar {
   height: 40px;
+  display: flex;
+  width: 100%;
   -webkit-app-region: drag;
+}
+
+.main-screen {
+  width: 100%;
+  display: block;
 }
 
 .nav-side {
