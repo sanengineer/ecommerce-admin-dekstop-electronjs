@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../search/search.module.css";
+import styles from "./Search.module.css";
 
 function Search(value = "...") {
   return (

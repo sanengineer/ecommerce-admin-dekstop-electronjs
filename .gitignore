@@ -105,3 +105,10 @@ dev-scripts/webpack-dev-server-error.log
 .DS_Store
 DS_Store
 ./DS_Store
+
+#env variable
+./env
+.env
+./env-variable.json
+.env-variable.json
+env-variable.json

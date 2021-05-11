@@ -11,6 +11,7 @@ const {
   REDUX_DEVTOOLS,
   REACT_DEVELOPER_TOOLS,
 } = require("electron-devtools-installer");
+
 const Protocol = require("./protocol");
 const MenuBuilder = require("./menu");
 const i18nextBackend = require("i18next-electron-fs-backend");
@@ -59,6 +60,9 @@ async function createWindow() {
     height: 600,
     minWidth: 720,
     minHeight: 560,
+    transparent: true,
+    // backgroundColor: "#fff",
+    frame: false,
     title: "Application is currently initializing...",
     webPreferences: {
       devTools: isDev,

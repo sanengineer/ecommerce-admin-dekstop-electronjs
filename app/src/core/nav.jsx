@@ -47,7 +47,7 @@ class Nav extends React.Component {
               <img src={YourBrandLogo} alt="logo" width={60} />
             </div>
             <div className="title-brand-container">
-              <div className="title-brand">Your Coffee</div>
+              <div className="title-brand">Your Brand</div>
             </div>
           </div>
           <nav
@@ -344,7 +344,7 @@ class Nav extends React.Component {
             <div className="nav-link">
               <Link
                 className="icon-title-wrapper-navlink"
-                onClick={() => this.navigate(ROUTES.PRODUCTS)}>
+                onClick={() => this.navigate(ROUTES.PROFILE)}>
                 <div className="icon-nav-link">
                   <svg
                     width="24"
@@ -386,7 +386,7 @@ class Nav extends React.Component {
             <div className="nav-link">
               <Link
                 className="icon-title-wrapper-navlink"
-                onClick={() => this.navigate(ROUTES.CATEGORIES)}>
+                onClick={() => this.navigate(ROUTES.SETTINGS)}>
                 <div className="icon-nav-link">
                   <svg
                     width="24"

@@ -1,0 +1,16 @@
+.container {
+  background-color: chartreuse;
+  margin: 20px;
+  display: block;
+
+  /* scroll-behavior: smooth; */
+  /* height: 100vh; */
+}
+
+.section {
+  display: flex;
+}
+
+.spacer {
+  width: 20px;
+}

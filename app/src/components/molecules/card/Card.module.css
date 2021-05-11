@@ -1,0 +1,7 @@
+.card_body {
+  background-color: cadetblue;
+  height: 100px;
+  width: 150px;
+  padding: 10px;
+  border-radius: 8px;
+}

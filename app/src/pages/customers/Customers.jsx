@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 const style = {
   "background-color": "red",
-  "width": "100vw",
   "height": "100vh",
 };
 
