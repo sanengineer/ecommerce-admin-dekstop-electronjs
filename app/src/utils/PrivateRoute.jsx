@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Redirect } from "react-router";
-import ROUTES from "../constants/routes.json";
+import ROUTES from "Constants/routes.json";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 

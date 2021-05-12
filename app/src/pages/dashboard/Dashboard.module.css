@@ -1,5 +1,5 @@
 .container {
-  background-color: chartreuse;
+  /* background-color: chartreuse; */
   margin: 20px;
   display: block;
 
@@ -11,6 +11,10 @@
   display: flex;
 }
 
-.spacer {
+.spacer_x {
   width: 20px;
+}
+
+.spacer_y {
+  height: 20px;
 }
