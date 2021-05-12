@@ -43,8 +43,13 @@
   padding: 8px;
   color: #fff;
   background-color: transparent;
-  border: 1px solid #6b6b6b;
+  border: 1px solid #585858;
   border-radius: 6px;
+}
+
+.form_input:focus {
+  border-color: greenyellow;
+  transition: border-color ease-in-out 0.3s;
 }
 
 .spacer_x {
@@ -62,21 +67,23 @@
 
 .login_btn {
   padding: 13px 16px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   border: unset;
   background-color: #000;
   color: #fff;
   border-radius: 6px;
   width: 100%;
+  cursor: pointer;
 }
 
 .login_btn:focus {
   outline: unset;
 }
 
-.login_btn:focus-within {
-  background-color: red;
+.login_btn:active {
+  transform: scale(0.97);
+  transition: transform 0.2s ease;
 }
 
 .login_btn:hover {

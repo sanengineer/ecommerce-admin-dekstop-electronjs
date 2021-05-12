@@ -5,6 +5,8 @@ import Styles from "./Login.module.css";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { loginUser } from "../../redux/actions/authLoginAction";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const LoginForm = ({
   // errors,
@@ -132,18 +134,21 @@ class Login extends Component {
   // }
 
   componentDidMount() {
-    console.log(
-      "this.props.auth.isAuthenticated:",
-      this.props.auth.isAuthenticated
-    );
+    console.log("this.props.auth.isAuthenticated:", this.props);
 
     if (this.props.auth.isAuthenticated) {
       this.props.history.push("/");
     }
+    // if (this.props.error === true) {
+
+    // }
   }
 
   render() {
     const { username, password } = this.state;
+    const { error } = this.props;
+
+    console.log("THIS_PROPS:", this.props);
 
     return (
       <div className={Styles.container}>
@@ -177,6 +182,17 @@ class Login extends Component {
             onSubmit={this.onSubmit}
           />
         </div>
+        <ToastContainer
+          position="bottom-center"
+          autoClose={2000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
       </div>
     );
   }
@@ -185,11 +201,12 @@ class Login extends Component {
 Login.propTypes = {
   loginUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  // errors: PropTypes.object.isRequired,
+  error: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = (state) => ({
   auth: state.auth,
+  error: state.error,
 });
 
 export default connect(mapStateToProps, { loginUser })(Login);
