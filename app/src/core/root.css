@@ -28,17 +28,26 @@ body {
   display: block;
 }
 
-.nav-side {
-  display: block;
-  padding: 10px;
-  height: 100vh;
+.nav-side-container {
+  position: relative;
+  /* display: block; */
+  /* padding: 10px; */
+  /* height: 100vh; */
   /* background-color: blue; */
   border-right: 1px solid #00000017;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   overflow: hidden;
   /* -webkit-app-region: drag; */
 }
 
+.nav-side {
+  position: -webkit-sticky;
+  justify-content: space-around;
+  position: fixed;
+  height: 100vh;
+  padding: 10px;
+  display: block;
+}
 .nav-link-container {
   position: absolute;
   bottom: 30px;

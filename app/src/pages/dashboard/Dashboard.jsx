@@ -291,8 +291,12 @@ export class Dashboard extends Component {
             <Chart />
           </div>
         </div>
+        <div className={Styles.spacer_y} />
         <div className={Styles.section}>
-          <TableMedium products={products} />
+          <TableMedium products={products} title="Top Selling Product" />
+          <div className={Styles.spacer_x} />
+          <div className={Styles.spacer_x} />
+          <TableMedium products={products} title="Top Loved Product" />
         </div>
       </div>
     );

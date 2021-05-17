@@ -15,24 +15,14 @@ const Row = (product) => {
   );
 };
 
-function Table() {
-  return (
-    <div className={Styles.container}>
-      <div>Table</div>
-    </div>
-  );
-}
-
-function TableMedium({ products, props }) {
-  // console.log("PRODUCTS:", products.length);
-
-  if (products === undefined || products.length === 0)
+function SkeletonLoop(props) {
+  for (let i = 0; i < 5; i++) {
     return (
       <ContentLoader
         speed={2}
-        width={900}
-        height={260}
-        viewBox="0 0 900 260"
+        width={320}
+        height={80}
+        viewBox="0 0 320 80"
         backgroundColor="#f3f3f3"
         foregroundColor="#ecebeb"
         {...props}>
@@ -42,15 +32,40 @@ function TableMedium({ products, props }) {
         <rect x="20" y="10" rx="3" ry="3" width="44" height="44" />
       </ContentLoader>
     );
+  }
+}
 
-  const rows = products.map((product) => Row(product));
+function Table() {
+  return (
+    <div className={Styles.container}>
+      <div>Table</div>
+    </div>
+  );
+}
+
+function TableMedium({ products, title }) {
+  // console.log("PRODUCTS:", products.length);
 
   return (
     <div
-      style={{ backgroundColor: "red", borderRadius: "8px", padding: "10px" }}>
-      <h4>Top Selling Product </h4>
+      style={{
+        border: "1px solid #cecece",
+        borderRadius: "8px",
+        padding: "10px",
+      }}>
+      <h4 style={{ fontWeight: "bold" }}>{title} </h4>
       <table>
-        <tbody>{rows}</tbody>
+        {products === undefined || products.length === 0 ? (
+          <>
+            <SkeletonLoop />
+            <SkeletonLoop />
+            <SkeletonLoop />
+            <SkeletonLoop />
+            <SkeletonLoop />
+          </>
+        ) : (
+          products.map((product) => Row(product))
+        )}
       </table>
     </div>
   );
