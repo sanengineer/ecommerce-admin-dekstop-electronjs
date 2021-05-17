@@ -160,6 +160,7 @@ class Login extends Component {
             justifyContent: "center",
             width: "100%",
             alignItems: "center",
+            webkitAppRegion: "drag"
           }}>
           <div width={60} style={{ display: "flex" }}>
             <img src={YourBrandLogo} alt="logo" width={30} />
