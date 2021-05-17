@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Card } from "../../components";
-import Table from "../../components/molecules/table/Table";
+import { TableMedium } from "../../components/molecules/table/Table";
 
 import Styles from "./Products.module.css";
 
@@ -19,7 +19,7 @@ export class Products extends Component {
         </div>
         <div className={Styles.spacer_y}></div>
         <div className={Styles.section}>
-          <Table />
+          <TableMedium />
         </div>
       </div>
     );

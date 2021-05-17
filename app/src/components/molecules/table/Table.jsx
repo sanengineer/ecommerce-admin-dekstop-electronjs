@@ -56,4 +56,4 @@ function TableMedium({ products, props }) {
   );
 }
 
-export { Table, TableMedium };
+export { TableMedium };
