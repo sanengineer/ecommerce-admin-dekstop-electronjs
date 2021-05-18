@@ -20,7 +20,9 @@ const Store = require("secure-electron-store").default;
 const ContextMenu = require("secure-electron-context-menu").default;
 const path = require("path");
 const fs = require("fs");
+const { win32 } = require("path");
 const isDev = process.env.NODE_ENV === "development";
+const isWin = process.platform === "win32";
 const port = 40992; // Hardcoded; needs to match webpack.development.js and package.json
 const selfHost = `http://localhost:${port}`;
 
@@ -62,7 +64,8 @@ async function createWindow() {
     minHeight: 560,
     transparent: true,
     // backgroundColor: "#fff",
-    frame: false,
+    frame: process.platform === "win32" ? true : false,
+    // frame: false,
     title: "Application is currently initializing...",
     webPreferences: {
       devTools: isDev,
@@ -79,7 +82,6 @@ async function createWindow() {
       ) /* eng-disable PRELOAD_JS_CHECK */,
       disableBlinkFeatures: "Auxclick",
     },
-    frame: false,
     titleBarStyle: "hidden",
   });
 
