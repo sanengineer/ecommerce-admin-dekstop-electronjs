@@ -14,6 +14,7 @@ const {
 
 const Protocol = require("./protocol");
 const MenuBuilder = require("./menu");
+const MinimizeTab = require("./minimize_bar").default;
 const i18nextBackend = require("i18next-electron-fs-backend");
 const i18nextMainBackend = require("../localization/i18n.mainconfig");
 const Store = require("secure-electron-store").default;
@@ -30,6 +31,7 @@ const selfHost = `http://localhost:${port}`;
 // be closed automatically when the JavaScript object is garbage collected.
 let win;
 let menuBuilder;
+let minimizeButton;
 
 async function createWindow() {
   // If you'd like to set up auto-updating for your app,
@@ -196,6 +198,8 @@ async function createWindow() {
     menuBuilder.buildMenu(i18nextMainBackend);
   });
 }
+
+minimizeButton = MinimizeTab();
 
 // Needs to be called before app is ready;
 // gives our scheme access to load relative files,
